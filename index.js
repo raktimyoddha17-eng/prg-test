@@ -72,3 +72,8 @@ document.addEventListener("keydown", (e) => {
     update();
   }
 });
+result.addEventListener("dblclick", async () => {
+    try {
+        await navigator.clipboard.writeText(result.textContent);
+    } catch {}
+});
